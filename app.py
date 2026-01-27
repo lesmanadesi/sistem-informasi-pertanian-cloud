@@ -6,10 +6,10 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        return redirect(url_for("dashboard"))
+        return redirect("/dashboard")
     return render_template("login.html")
 
-@app.route("/dashboard")
+@app.route("/dashboard", methods=["GET"])
 def dashboard():
     return render_template("dashboard.html")
 
