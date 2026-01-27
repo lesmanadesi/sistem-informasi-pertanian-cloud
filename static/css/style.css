@@ -1,1 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
+/* LOGIN */
+.login-bg {
+    background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+    height: 100vh;
+}
+
+.login-box {
+    width: 300px;
+    margin: 120px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* DASHBOARD BACKGROUND */
+.dashboard-bg {
+    background:
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url("../img/bg-pertanian.jpg");
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* FORM KECIL */
+.container.small {
+    max-width: 500px;
+}
+
+h1, h2 {
+    color: #2e7d32;
+    font-size: 24px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: #2e7d32;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-danger {
+    background: #c62828;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+th {
+    background: #e8f5e9;
+}
