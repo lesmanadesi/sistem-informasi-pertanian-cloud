@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Lahan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="dashboard-bg">
+
+<div class="container small">
+    <h2>Tambah Data Lahan</h2>
+
+    <form method="post">
+        <label>Nama Lahan</label>
+        <input type="text" name="nama_lahan" required>
+
+        <label>Luas (Ha)</label>
+        <input type="number" step="0.1" name="luas" required>
+
+        <label>Lokasi</label>
+        <input type="text" name="lokasi" required>
+
+        <button type="submit" class="btn">Simpan</button>
+    </form>
+
+    <a href="/dashboard">← Kembali ke Dashboard</a>
+</div>
+
+</body>
+</html>
+
