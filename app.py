@@ -1,15 +1,13 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, request, redirect, url_for
 import os
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
+@app.route("/", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        return redirect(url_for("dashboard"))
     return render_template("login.html")
-
-@app.route("/masuk")
-def masuk():
-    return redirect("/dashboard")
 
 @app.route("/dashboard")
 def dashboard():
