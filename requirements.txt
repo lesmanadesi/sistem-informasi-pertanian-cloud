@@ -1,3 +1,5 @@
-flask
+Flask
+gunicorn
 flask-mysqldb
-werkzeug
+mysqlclient
+
