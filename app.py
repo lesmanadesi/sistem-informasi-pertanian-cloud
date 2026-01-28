@@ -1,10 +1,10 @@
-from flask import Flask, render_template, request, redirect, url_for, session
-from flask_mysqldb import MySQL
-import MySQLdb.cursors
-import os
+from flask import Flask
 
 app = Flask(__name__)
-app.secret_key = 'secretkey123'  # bebas, asal ada
+
+@app.route("/", methods=["GET"])
+def home():
+    return "APP HIDUP - ROOT OK"
 
 # ===============================
 # KONFIGURASI DATABASE
@@ -72,4 +72,5 @@ def logout():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8080))
     app.run(host='0.0.0.0', port=port, debug=True)
+
 
