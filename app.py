@@ -1,18 +1,28 @@
 from flask import Flask, render_template, request, redirect, url_for
-import os
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        return redirect("/dashboard")
+# ======================
+# HALAMAN LOGIN (GET)
+# ======================
+@app.route("/", methods=["GET"])
+def index():
     return render_template("login.html")
 
+# ======================
+# PROSES LOGIN (POST)
+# ======================
+@app.route("/login", methods=["POST"])
+def login():
+    # nanti bisa tambah cek username/password
+    return redirect(url_for("dashboard"))
+
+# ======================
+# DASHBOARD
+# ======================
 @app.route("/dashboard", methods=["GET"])
 def dashboard():
     return render_template("dashboard.html")
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=True)
